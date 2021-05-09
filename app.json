@@ -1,0 +1,12 @@
+{
+  "name": "react-native-gokwik",
+  "displayName": "react-native-gokwik",
+  "expo": {
+    "name": "react-native-gokwik",
+    "slug": "react-native-gokwik",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
