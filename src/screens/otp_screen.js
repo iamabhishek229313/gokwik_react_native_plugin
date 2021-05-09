@@ -16,7 +16,7 @@ export function OTPScreen() {
 
   return (
     <View style={styles.container}>
-      <Text>UPI Payment Screen</Text>
+      <Text>OTP Screen</Text>
     </View>
   );
 }

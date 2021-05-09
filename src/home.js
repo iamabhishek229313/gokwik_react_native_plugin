@@ -57,6 +57,7 @@ export function Home({ navigation }) {
           <Button
             title="Cash on delivery OTP"
             onPress={async () => {
+              navigation.navigate("OTPScreen");
               //   RNUpiPayment.initializePayment(
               //     {
               //       vpa: "7004883767@upi", // or can be john@ybl or mobileNo@upi
@@ -67,19 +68,19 @@ export function Home({ navigation }) {
               //     successCallback,
               //     failureCallback
               //   );
-              console.log("Type of success : " + typeof successCallback);
-              RNUpiPayment.initializePayment(
-                {
-                  vpa: "something@bank", //your upi address like 12345464896@okhdfcbank
-                  payeeName: " abc", // payee name
-                  amount: "1", //amount
-                  transactionNote: "Testing Upi", //note of transaction
-                  transactionRef: "aasf-332-aoei-fn", //some refs to aknowledge the transaction
-                },
-                "PAYTM",
-                successCallback,
-                failureCallback
-              );
+              // console.log("Type of success : " + typeof successCallback);
+              // RNUpiPayment.initializePayment(
+              //   {
+              //     vpa: "something@bank", //your upi address like 12345464896@okhdfcbank
+              //     payeeName: " abc", // payee name
+              //     amount: "1", //amount
+              //     transactionNote: "Testing Upi", //note of transaction
+              //     transactionRef: "aasf-332-aoei-fn", //some refs to aknowledge the transaction
+              //   },
+              //   "PAYTM",
+              //   successCallback,
+              //   failureCallback
+              // );
               //   await Linking.addEventListener(
               //     "paytmmp://upi/pay?pa=7024293076@upi&pn=DK Bose&mc=0000&tr=123456789ABCDEFG&tn=HelloWorld&am=11&cu=INR",
               //     (res) => {
