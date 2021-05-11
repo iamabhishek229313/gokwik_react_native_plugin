@@ -1,23 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import {
-  SafeAreaView,
-  Text,
-  TextInput,
-  View,
-  StyleSheet,
-  Button,
-  Alert,
-  Dimensions,
-  Linking,
-} from "react-native";
-
-import RNUpiPayment from "react-native-upi-pay";
+import React, { useState } from 'react';
+import { Button, Dimensions, StyleSheet, TextInput, View } from 'react-native';
 
 export function Home({ navigation }) {
-  const { width, height } = Dimensions.get("window");
+  const { width, height } = Dimensions.get('window');
 
-  const [phoneNumber, changeNo] = useState("");
+  const [phoneNumber, changeNo] = useState('');
 
   function successCallback(data) {}
   function failureCallback(data) {}
@@ -26,7 +13,7 @@ export function Home({ navigation }) {
     <View style={styles.container}>
       <View
         style={{
-          justifyContent: "flex-start",
+          justifyContent: 'flex-start',
           flex: 1,
           width: width / 1.2,
         }}
@@ -36,7 +23,7 @@ export function Home({ navigation }) {
           keyboardType="numeric"
           onChangeText={(val) => changeNo(val)}
           style={{
-            borderColor: "black",
+            borderColor: 'black',
             borderWidth: 1,
             fontSize: 16,
             padding: 8,
@@ -46,7 +33,7 @@ export function Home({ navigation }) {
         <View style={{ marginTop: 20 }}>
           <Button
             title="Pay now using UPI"
-            onPress={() => navigation.navigate("UPIPayScreen")}
+            onPress={() => navigation.navigate('UPIPayScreen')}
           />
         </View>
         <View
@@ -57,7 +44,7 @@ export function Home({ navigation }) {
           <Button
             title="Cash on delivery OTP"
             onPress={async () => {
-              navigation.navigate("OTPScreen");
+              navigation.navigate('OTPScreen');
               //   RNUpiPayment.initializePayment(
               //     {
               //       vpa: "7004883767@upi", // or can be john@ybl or mobileNo@upi
@@ -104,12 +91,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "space-evenly",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
   },
   boldText: {
     fontSize: 18,
-    fontWeight: "200",
+    fontWeight: '200',
   },
 });
