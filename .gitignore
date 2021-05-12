@@ -52,3 +52,6 @@ buck-out/
 # Expo
 .expo/
 web-build/
+
+# Debug folder for vscode
+.vscode/
